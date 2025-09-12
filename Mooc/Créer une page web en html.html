@@ -7,85 +7,96 @@
 </head>
 <body>
 
-    <h1>Créez votre première page web en HTML</h1>
+    <main>
+        <h1>Créez votre première page web en HTML</h1>
 
-    <h2>Pour créer une page web en HTML</h2>
-    <p>Pour créer une page web en HTML, il suffit de créer un fichier ayant l'extension.html.</p>
-    <p>Ce fichier s'ouvre dans le navigateur web simplement en faisant un double-clic dessus.</p>
-    <p>Vous trouverez les différentes étapes pour créer ce fichier dans la vidéo d'introduction de chapitre, à l'aide de <strong>Visual Studio Code</strong>, qu’il vous faut télécharger.</p>
+        <section>
+            <h2>Pour créer une page web en HTML</h2>
+            <p>Pour créer une page web en HTML, il suffit de créer un fichier ayant l'extension.html.</p>
+            <p>Ce fichier s'ouvre dans le navigateur web simplement en faisant un double-clic dessus.</p>
+            <p>Vous trouverez les différentes étapes pour créer ce fichier dans la vidéo d'introduction de chapitre, à l'aide de <strong>Visual Studio Code</strong>, qu’il vous faut télécharger.</p>
+        </section>
 
-    <hr>
+        <hr>
 
-    <h2>Appropriez-vous les balises HTML</h2>
-    <p>Le langage HTML utilise ce qu'on appelle des <strong>balises</strong>. On les écrit entre <strong>chevrons</strong> < et > :</p>
-    
-    <img src="images\16693910453649_FR_1603881_HTML-CSS_Static-Graphics_p1c3-1.jpg" alt="balise HTML" style="padding: 10px; width:500px;">
+        <section>
+            <h2>Appropriez-vous les balises HTML</h2>
+            <p>Le langage HTML utilise ce qu'on appelle des <strong>balises</strong>. On les écrit entre <strong>chevrons</strong> < et > :</p>
+            
+            <img src="images\16693910453649_FR_1603881_HTML-CSS_Static-Graphics_p1c3-1.jpg" alt="balise HTML" style="padding: 10px; width:500px;">
 
-    <p>Les <strong>balises</strong> indiquent la nature du texte qu'elles encadrent. Elles permettent au navigateur de comprendre ce qu'il faut afficher à l'écran pour les visiteurs d'un site web.</p>
-    <p>Si elles pouvaient parler, elles diraient :</p>
-    <ul>
-        <li><code>&lt;title&gt;&lt;/title&gt;</code> : “Ceci est le titre de la page”</li>
-        <li><code>&lt;img&gt;</code>: “Ceci est une image”</li>
-        <li><code>&lt;p&gt;&lt;/p&gt;</code>: “Ceci est un paragraphe de texte”, etc.</li>
-    </ul>
-
-    <p>On distingue deux types de balises :</p>
-    <ul>
-        <li>Les <strong>balises en paires</strong> (une balise ouvrante et une balise fermante)</li>
-        <li>Et les <strong>balises orphelines</strong> (une seule balise).</li>
-    </ul>
-    
-    <h3>Les balises en paires</h3>
-    <p>Elles s'ouvrent, contiennent du texte, et se ferment plus loin. Si on prend la balise <code>title</code> qui correspond au titre de la page, </p>
-    <p>On a donc :</p>
-    <ul>
-        <li>Une balise ouvrante : <code>&lt;title&gt;</code> ;</li>
-        <li>Et une balise fermante : <code>&lt;/title&gt;</code>.</li>
-    </ul>
-
-    <h3>Les balises orphelines</h3>
-    <p>Ce sont des balises qui servent le plus souvent à insérer un élément à un endroit précis (par exemple une image). Il n'est pas nécessaire de délimiter le début et la fin de l'image, on veut juste dire à l'ordinateur “Insère une image ici”. Il n'y a donc pas besoin de faire une balise ouvrante et une fermante, d'où l'appellation "balise orpheline".</p>
-    <p>Une balise orpheline s'écrit comme ceci : <code>&lt;img&gt;</code></p>
-
-    <hr>
-
-    <h2>Utilisez la structure de base d'une page HTML</h2>
-    <p>Pour écrire votre première vraie page web en HTML, ouvrez votre fichier <code>index.html</code> sous Visual Studio Code.</p>
-    
-    <img src="images\16693917384741_FR_1603881_HTML-CSS_Static-Graphics_p1c3-3.jpg" alt="balise HTML" style="padding: 10px; width:500px;">
-
-    <p>Voyons à quoi servent toutes ces balises.</p>
-    <ul>
-        <li>La première ligne <code>&lt;!DOCTYPE html&gt;</code> est une balise orpheline indispensable : elle indique qu'il s'agit d'une page HTML.</li>
-        <li>La balise en paire <code>&lt;html&gt;&lt;/html&gt;</code> englobe tout le contenu de la page web. A l'intérieur, il y a les balises en paire <code>&lt;head&gt;&lt;/head&gt;</code> et <code>&lt;body&gt;&lt;/body&gt;</code>. Pour rappel, c’est dans cette balise qu'on peut préciser la langue par défaut du site web :
+            <p>Les <strong>balises</strong> indiquent la nature du texte qu'elles encadrent. Elles permettent au navigateur de comprendre ce qu'il faut afficher à l'écran pour les visiteurs d'un site web.</p>
+            <p>Si elles pouvaient parler, elles diraient :</p>
             <ul>
-                <li><code>&lt;html lang=”fr”&gt;</code> pour le français ;</li>
-                <li><code>&lt;html lang=”en”&gt;</code> pour l’anglais ;</li>
-                <li><code>&lt;html lang=”es”&gt;</code> pour l’espagnol…</li>
+                <li><code>&lt;title&gt;&lt;/title&gt;</code> : “Ceci est le titre de la page”</li>
+                <li><code>&lt;img&gt;</code>: “Ceci est une image”</li>
+                <li><code>&lt;p&gt;&lt;/p&gt;</code>: “Ceci est un paragraphe de texte”, etc.</li>
+            </ul>
+
+            <p>On distingue deux types de balises :</p>
+            <ul>
+                <li>Les <strong>balises en paires</strong> (une balise ouvrante et une balise fermante)</li>
+                <li>Et les <strong>balises orphelines</strong> (une seule balise).</li>
             </ul>
             
-            Si besoin, voici <a href="https://www.w3schools.com/tags/ref_language_codes.asp">la liste complète des codes de langue</a>.
-        </li>
-        <li>La balise en paire <code>&lt;head&gt;&lt;/head&gt;</code> contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.</li>
-        <li>La balise orpheline <code>&lt;meta charset="utf-8"&gt;</code> indique l'encodage utilisé dans le fichier <code>.html</code> : cela détermine comment les caractères spéciaux s'affichent (accents, idéogrammes chinois et japonais, etc.).</li>
-        <li>La balise en paire <code>&lt;title&gt;&lt;/title&gt;</code> indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu'elle contient, il s'affichera dans l'onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !</li>
-        <li>La balise en paire <code>&lt;body&gt;&lt;/body&gt;</code> contient tout ce qui sera affiché à l'écran sur la page web.</li>
-    </ul>
+            <h3>Les balises en paires</h3>
+            <p>Elles s'ouvrent, contiennent du texte, et se ferment plus loin. Si on prend la balise <code>title</code> qui correspond au titre de la page, </p>
+            <p>On a donc :</p>
+            <ul>
+                <li>Une balise ouvrante : <code>&lt;title&gt;</code> ;</li>
+                <li>Et une balise fermante : <code>&lt;/title&gt;</code>.</li>
+            </ul>
 
-    <hr>
+            <h3>Les balises orphelines</h3>
+            <p>Ce sont des balises qui servent le plus souvent à insérer un élément à un endroit précis (par exemple une image). Il n'est pas nécessaire de délimiter le début et la fin de l'image, on veut juste dire à l'ordinateur “Insère une image ici”. Il n'y a donc pas besoin de faire une balise ouvrante et une fermante, d'où l'appellation "balise orpheline".</p>
+            <p>Une balise orpheline s'écrit comme ceci : <code>&lt;img&gt;</code></p>
+        </section>
 
-    <h2>Commentez votre code HTML</h2>
-    <p>Un <strong>commentaire</strong> en HTML est un texte qui sert simplement de mémo. Il n'est pas affiché, il n'est pas lu par l'ordinateur, cela ne change rien à l'affichage de la page.</p>
-    <p><strong>Si !</strong> Cela sert à vous qui développez et aux personnes qui liront le code source de votre page. Vous pouvez utiliser les commentaires pour laisser des indications sur le fonctionnement de votre page. Cela vous permettra de vous rappeler comment fonctionne votre page si vous revenez sur votre code source après un long moment d'absence.</p>
-    <p>Un commentaire est une balise HTML avec une forme bien spéciale :</p>
-    <pre>< !-- Ceci est un commentaire -- ></pre>
-    <p>Vous pouvez le mettre où vous voulez au sein de votre code source.</p>
-    <p>D'ailleurs, dans la plupart des éditeurs de code, il existe un raccourci pour commenter une ligne de code très rapidement. Sur Visual Studio Code, pour transformer une ligne (ou même plusieurs lignes) en commentaire :</p>
-    <ul>
-        <li>sélectionnez la ligne (ou les lignes) en question :</li>
-        <li>utilisez le raccourci clavier avec la touche CTRL + k puis CTRL + c (ou ⌘ command + k puis ⌘ command + csur mac).</li>
-    <img src="images\16974700018489_unnamed.gif" alt="gif" style="padding: 10px; width:500px;">
-    </ul>
+        <hr>
+
+        <section>
+            <h2>Utilisez la structure de base d'une page HTML</h2>
+            <p>Pour écrire votre première vraie page web en HTML, ouvrez votre fichier <code>index.html</code> sous Visual Studio Code.</p>
+            
+            <img src="images\16693917384741_FR_1603881_HTML-CSS_Static-Graphics_p1c3-3.jpg" alt="balise HTML" style="padding: 10px; width:500px;">
+
+            <p>Voyons à quoi servent toutes ces balises.</p>
+            <ul>
+                <li>La première ligne <code>&lt;!DOCTYPE html&gt;</code> est une balise orpheline indispensable : elle indique qu'il s'agit d'une page HTML.</li>
+                <li>La balise en paire <code>&lt;html&gt;&lt;/html&gt;</code> englobe tout le contenu de la page web. A l'intérieur, il y a les balises en paire <code>&lt;head&gt;&lt;/head&gt;</code> et <code>&lt;body&gt;&lt;/body&gt;</code>. Pour rappel, c’est dans cette balise qu'on peut préciser la langue par défaut du site web :
+                    <ul>
+                        <li><code>&lt;html lang=”fr”&gt;</code> pour le français ;</li>
+                        <li><code>&lt;html lang=”en”&gt;</code> pour l’anglais ;</li>
+                        <li><code>&lt;html lang=”es”&gt;</code> pour l’espagnol…</li>
+                    </ul>
+                    
+                    Si besoin, voici <a href="https://www.w3schools.com/tags/ref_language_codes.asp">la liste complète des codes de langue</a>.
+                </li>
+                <li>La balise en paire <code>&lt;head&gt;&lt;/head&gt;</code> contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.</li>
+                <li>La balise orpheline <code>&lt;meta charset="utf-8"&gt;</code> indique l'encodage utilisé dans le fichier <code>.html</code> : cela détermine comment les caractères spéciaux s'affichent (accents, idéogrammes chinois et japonais, etc.).</li>
+                <li>La balise en paire <code>&lt;title&gt;&lt;/title&gt;</code> indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu'elle contient, il s'affichera dans l'onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !</li>
+                <li>La balise en paire <code>&lt;body&gt;&lt;/body&gt;</code> contient tout ce qui sera affiché à l'écran sur la page web.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Commentez votre code HTML</h2>
+            <p>Un <strong>commentaire</strong> en HTML est un texte qui sert simplement de mémo. Il n'est pas affiché, il n'est pas lu par l'ordinateur, cela ne change rien à l'affichage de la page.</p>
+            <p><strong>Si !</strong> Cela sert à vous qui développez et aux personnes qui liront le code source de votre page. Vous pouvez utiliser les commentaires pour laisser des indications sur le fonctionnement de votre page. Cela vous permettra de vous rappeler comment fonctionne votre page si vous revenez sur votre code source après un long moment d'absence.</p>
+            <p>Un commentaire est une balise HTML avec une forme bien spéciale :</p>
+            <pre>< !-- Ceci est un commentaire -- ></pre>
+            <p>Vous pouvez le mettre où vous voulez au sein de votre code source.</p>
+            <p>D'ailleurs, dans la plupart des éditeurs de code, il existe un raccourci pour commenter une ligne de code très rapidement. Sur Visual Studio Code, pour transformer une ligne (ou même plusieurs lignes) en commentaire :</p>
+            <ul>
+                <li>sélectionnez la ligne (ou les lignes) en question :</li>
+                <li>utilisez le raccourci clavier avec la touche CTRL + k puis CTRL + c (ou ⌘ command + k puis ⌘ command + csur mac).</li>
+            </ul>
+            <img src="images\16974700018489_unnamed.gif" alt="gif" style="padding: 10px; width:500px;">
+        </section>
+
+    </main>
 
 </body>
 </html>
