@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for ('static', filename='style.css')}}">
+    <title>Inscription</title>
+</head>
+<body>
+    <a href="/login"><button class="bouton" id="bouton-retour">Connexion</button></a>
+    <a href="/"><button class="bouton" id="bouton-retour">inscription</button></a>
+        <form id="form" action="/inscrire" method="post">
+            <!--c'est le div page-->
+            <div class="page">
+                <label for="prenom">Prenom</label>
+                <input type="text" name="prenom" id="prenom" class="form-input" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-input" required>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" class="form-input" required>
+                <!--ici on mets si il y a une erreur (voir app.py) alors un paragraphe rouge affichons l'erreur-->
+                {% if error %}
+                <p style="color:red;">{{ error }}</p>
+                {% else %}
+                <!--sinon le paragraphe est a ca place mais pas d'ecruture-->
+                <p id="error-message"></p>
+                {% endif %} <!--fin de l'instruction-->
+                <!--c'est le bouton s'inscrire-->
+                <button class="button" id="button" type="submit">S'inscrire</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
