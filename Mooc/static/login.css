@@ -1,1 +1,125 @@
+/*couleur general*/
+body{
+    /* pour la couleur de fond*/
+    background-color: #2c3e50;
+    /* pour la police d'ecriture*/
+    font-family: 'Roboto', sans-serif;
+}
+/*----forme et positionnement des boutons----*/
+.bouton {
+    /*pour le style de l'ensemble des boutons*/
+    /*pas de bordure*/
+    border: none;
+    /*un peu d'espace a l'interieur*/
+    padding: 5px;
+    /*un peu d'arrondi*/
+    border-radius: 12px;
+    /*largeur donner*/
+    width: 150px;
+    /*hauteur donner*/
+    height: 35px;
+    /*couleur de fond*/
+    background-color: rgb(112, 131, 240);
+    /*ajoute transition pour le bakgroud mais egalement pour le clicke*/
+    transition: background-color 0.5s ease, transform 0.4s ease;
+    /* pour le pointeur de souris*/
+    cursor: pointer;
+    /*pour la couleur de texte*/
+    color: white;
+    margin-bottom: 3px;
+}
+.bouton:hover{
+    background-color: #2980b9;
+}
+.bouton:active{
+    /*pour la rendre petite quand on clicke*/
+    transform: scale(0.95);
+}
+.p{
+    display: flex;
+    align-self: flex-start;
+    background-color: rgb(255, 158, 67);
+    cursor: pointer;
+    width: 140px;
+    height: 20px;
+    padding: 8px;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    right: 0;
+    top: 2px;
+}
+.p:hover {
+    background-color: rgb(245, 189, 126);
+}
+.p:active{
+    transform: scale(0.95);
+}
+
+/*structure de l'input et des boutons submits*/
+.page {
+    /*le display flex deja expliquer voir en haut*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*jusqu'ici*/
+    /*la bordure la taille, forme et couleur */
+    border: 1px solid #ccc;
+    width: 450px;
+    background-color: #ccc;
+    border-radius: 8px;
+    height: 225px;
+    /*450 px a partir du gauche*/
+    margin-left: 450px;
+    position: fixed;
+    top: 0;
+    padding: 10px;
+    margin-top: 110px;
+}
+.form-input{
+    /*voir en haut*/
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    width: 250px;
+    /*pour decaler ce qui sont en bas par raport a ou elle est*/
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*on va rendre la page responsive ca veut dire adaptable a different ecran*/
+/*pour cela on utilise le mot clé media query*/
+/*paysage (c'est qu'on on inverse le telephone de sa position)*/
+@media screen and (orientation: landscape) and (max-width: 935px) {
+.page {
+    margin-left: 20vw; /* 20% de la largeur de l'écran */
+}
+}
+/*paysage (c'est qu'on on inverse le tablette de sa position)*/
+@media screen and (min-width:950px) and (max-width:1100px) and (orientation: landscape) {
+    .page{
+        margin-left: 250px;
+    }
+}
+/*portrait( c'est la telephone dans sont mode normal)*/
+@media screen and (orientation: portrait) and (max-width: 600px) {
+    .page {
+        /*on change la hauteur, largeur, et on decale du gauche*/
+        height: 225px;
+        width: 275px;
+        margin-left: 50px;
+    }
+}
+/*portrait( c'est la tablette dans sont mode normal)*/
+@media screen and (min-width: 820px) and (max-width: 1380px) and (orientation: portrait) {
+    .page{
+        /*on decale un peu du gauche*/
+        margin-left: 200px;
+    }
+}
 
