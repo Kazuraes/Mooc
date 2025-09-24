@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un lien hypertexte en HTML</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='creer_une_page_html.css')}}">
+</head>
+<body>
+    <div class="position">
+        <div class="html">
+            <button class="bouton">Cours HTML</button>
+             <div class="creer_une_page_html">   
+            <a href="/creer_une_page_html">
+                <button>Créez votre première page web en HTML</button>
+            </a>
+            <a href="/organiser_votre_texte">
+                <button>Organisez votre texte en HTML</button>
+            </a>
+            <a href="/creer_un_lien_hypertexte_en_html">
+                <button>Créez un lien hypertexte en HTML</button>
+            </a>
+            <a href="/inserer_des_images">
+                <button>Insérer une image en HTML</button>
+            </a>
+        </div>
+        </div>
+        <div class="organiser_votre_texte">
+            <button class="bouton">Quiz HTML</button>
+        </div>
+        <div class="creer_un_lien_hypertexte_en_html">
+            <button class="bouton">Cours CSS</button>
+        </div>
+        <div class="inserer_des_images">
+            <button class="bouton">Quiz CSS</button>
+        </div>
+    </div>
+    <main>
+    <h1>Créez un lien hypertexte en HTML</h1>
+    <p>On reconnaît facilement un <strong>lien hypertexte</strong> (ou hyperlien) sur une page web : par défaut, il est en bleu et souligné dans le navigateur et un curseur en forme de main apparaît lorsqu'on pointe dessus ; mais on peut modifier ce style en CSS.</p>
 
+    <hr>
+
+    <h2>Créez un lien hypertexte avec la balise &lt;a&gt; et l'attribut &lt;href&gt;</h2>
+    <p>Pour faire un lien hypertexte :</p>
+    <ol>
+        <li>on utilise la balise <code>&lt;a&gt;</code> (pour "anchor") pour indiquer qu'on va rediriger vers un autre endroit,</li>
+        <li>puis, on ajoute l'attribut <code>href</code> suivi de <code>=</code> pour annoncer l'endroit vers lequel on veut rediriger,</li>
+        <li>on indique explicitement entre <code>" "</code> l'endroit vers lequel le lien doit rediriger,</li>
+        <li>enfin, on écrit le texte qui doit s'afficher sur l'hyperlien.</li>
+    </ol>
+    <p>À partir de là, il y a des subtilités selon l'endroit où l'on veut rediriger l'utilisateur.</p>
+
+    <hr>
+
+    <h2>Créez un lien hypertexte vers l'URL d'une page disponible sur internet</h2>
+    <p>Si vous voulez faire un lien vers un autre site existant en ligne, rien de plus simple, il suffit d'utiliser la méthode de copier l'URL du site entre <code>" "</code> à la suite de l'attribut, comme ceci :</p>
+    <pre><code>&lt;a href="https://openclassrooms.com/fr/"&gt;Accédez à OpenClassrooms&lt;/a&gt;</code></pre>
+    <p>Ce type de lien hypertexte s'appelle un <strong>lien absolu</strong> : il indique une adresse complète.</p>
+    <p>Nous allons maintenant voir que l'on peut écrire les liens d'une façon un peu différente, ce qui va nous être utile pour faire des liens entre les pages de notre site.</p>
+
+    <hr>
+
+    <h2>Créez un lien hypertexte d'une page à une autre sur votre site</h2>
+    <p>Souvenez-vous : pour l’instant nous n’avons pas d’URL disponible car le site n’est pas encore en ligne. On va donc créer des liens entre nos pages en utilisant leur nom, et en indiquant leur arborescence dans notre dossier en local.</p>
+    <p>Ce type de lien hypertexte s'appelle un <strong>lien relatif</strong> : il indique où trouver notre fichier HTML.</p>
+
+    <h3>Cas n°1 : les deux pages sont situées dans un même dossier en local</h3>
+    <p>Si les pages sont dans le même dossier, il suffit d'écrire comme cible du lien hypertexte le nom du fichier vers lequel on veut amener, par exemple le fichier nommé <code>page2.html</code>.</p>
+    <p>Si on veut aller de la page 1 à la page 2, voici ce que nous écrirons dans le fichier de <code>page1.html</code> :</p>
+    <pre><code>&lt;a href="page2.html"&gt;Page 2&lt;/a&gt;</code></pre>
+    <p>Mais comment faire si on veut créer un fichier page 3 et le déplacer dans un dossier <code>/contenu</code> : comment indiquer le chemin relatif ?</p>
+    <p>Justement, la réponse est dans la question : en indiquant le chemin !</p>
+
+    <h3>Cas n°2 : les deux pages sont situées dans deux dossiers différents en local</h3>
+    <p>Si on veut créer un fichier page 3 et le déplacer dans un autre dossier, par exemple un dossier <code>/contenu</code>, on va donc indiquer le chemin à suivre pour trouver ce fichier :</p>
+    <pre><code>&lt;a href="contenu/page3.html"&gt;Page 3&lt;/a&gt;</code></pre>
+    <p>Et s'il y a plusieurs sous-dossiers, on écrira ceci :</p>
+    <pre><code>&lt;a href="contenu/autredossier/page3.html"&gt;Page 3&lt;/a&gt;</code></pre>
+    <p>Et si le fichier ne se trouve pas dans un sous-dossier, mais dans un dossier “parent”, on fait comment ?</p>
+    <p>Si votre fichier cible est placé dans un dossier qui se trouve “plus haut” dans l'arborescence, il faut écrire deux points <code>..</code>, comme ceci :</p>
+    <pre><code>&lt;a href="../page3.html"&gt;Page 3&lt;/a&gt;</code></pre>
+
+    <hr>
+
+    <h2>Créez une ancre avec les attributs &lt;id&gt; et &lt;href&gt;</h2>
+    <p>Une ancre est un repère que l'on peut mettre dans une page HTML si elle est très longue, cela aide à la navigation et rend un contenu plus facile à parcourir. Cela permet par exemple aux visiteurs d'un site web d'aller directement à la partie qui les intéresse.</p>
+    <p>Ce comportement est typique d'un site web "one page" où tout se situe sur la même page.</p>
+    <p>Pour créer une ancre, il suffit de rajouter l'attribut <code>id</code> à une balise qui va alors servir de repère. Ce peut être n'importe quelle balise, une balise de titre par exemple. Voyons comment faire :</p>
+    <p>La première étape consiste à ajouter l'attribut <code>id</code> suivi de <code>=</code> pour donner un nom à l'ancre entre <code>" "</code> :</p>
+    <pre><code>&lt;h2 id="mon_ancre"&gt;Titre&lt;/h2&gt;</code></pre>
+    <p>L'attribut <code>id</code> sert à donner un nom “unique” à une balise, pour s'en servir de repère. Et, croyez-moi, vous n'avez pas fini d'entendre parler de cet attribut. Ici, on s'en sert pour faire un lien vers une ancre mais, en CSS, il pourra nous être utile pour repérer une balise précise, vous verrez.</p>
+    <blockquote>
+        <p>Évitez de créer des <code>id</code> avec des espaces ou des caractères spéciaux ; utilisez simplement, dans la mesure du possible, des lettres et des chiffres pour que la valeur soit reconnue par tous les navigateurs.</p>
+    </blockquote>
+    <p>La seconde étape consiste à indiquer où se situe l'ancre. La méthode pour ce faire varie selon que :</p>
+    <ul>
+        <li>l'ancre est plus bas sur la même page</li>
+        <li>l'ancre est située sur une autre page</li>
+    </ul>
+
+    <h3>Cas n°1 : l'ancre est plus bas sur la même page</h3>
+    <p>Dans ce premier cas, on crée un lien avec l'attribut <code>href</code> (il contient un dièse <code>#</code> suivi du nom de l'ancre) :</p>
+    <pre><code>&lt;a href="#mon_ancre"&gt;Aller vers l'ancre&lt;/a&gt;</code></pre>
+    <p>Voici un exemple de page comportant beaucoup de texte et utilisant les ancres :</p>
+    <pre><code>&lt;h1&gt;Ma grande page&lt;/h1&gt;
+&lt;p&gt;
+Découvrez nos conseils d’aménagement pour :&lt;br&gt;
+    &lt;a href="#cuisine"&gt;La cuisine&lt;/a&gt;&lt;br&gt;
+    &lt;a href="#jardin"&gt;Le jardin&lt;/a&gt;&lt;br&gt;
+    &lt;a href="#salon"&gt;Le salon&lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;h2 id="cuisine"&gt;La cuisine&lt;/h2&gt;
+&lt;p&gt;... (beaucoup de texte) ...&lt;/p&gt;
+&lt;h2 id="jardin"&gt;Le jardin&lt;/h2&gt;
+&lt;p&gt;... (beaucoup de texte) ...&lt;/p&gt;
+&lt;h2 id="salon"&gt;Le salon&lt;/h2&gt;
+&lt;p&gt;... (beaucoup de texte) ...&lt;/p&gt;</code></pre>
+    <p>Testez pour voir avec le CodePen P1C5</p>
+    <p>Vous avez peut-être remarqué que l’on a commencé à utiliser du latin pour remplir des zones de texte dans notre code. C'est normal, pas de panique ! Il s'agit du "lorem ipsum", un “faux texte” qu'on peut ajouter provisoirement, de manière à calibrer une mise en page avant la validation d’un texte définitif.</p>
+
+    <h3>Cas n°2 : l'ancre est située dans une autre page</h3>
+    <p>Dans ce cas-là, on tape le nom de la page cible avant le dièse <code>#</code> et enfin le nom de l'ancre :</p>
+    <pre><code>&lt;a href="index.html#jardin"&gt;Le jardin&lt;/a&gt;</code></pre>
+    <p>Voici une nouvelle page qui contient trois liens, chacun amenant vers une des ancres de la page de l'exemple précédent :</p>
+    <pre><code>&lt;h1&gt;Le Mégamix&lt;/h1&gt;
+&lt;p&gt;
+Rendez-vous quelque part sur la page :&lt;br&gt;
+    &lt;a href="index.html#cuisine"&gt;La cuisine&lt;/a&gt;&lt;br&gt;
+    &lt;a href="index.html#jardin"&gt;Le jardin&lt;/a&gt;&lt;br&gt;
+    &lt;a href="index.html#salon"&gt;Le salon&lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;</code></pre>
+    <p>Et voilà pour tout ce que vous devez savoir sur les liens !</p>
+    <p>Sachez qu'il est possible de configurer un lien pour qu'il ait un comportement un peu particulier.</p>
+    <ul>
+        <li><code>target="_blank"</code> fait en sorte que le lien hypertexte ouvre un nouvel onglet :<br>
+            <code>&lt;p&gt;Bonjour. Souhaitez-vous apprendre sur &lt;a href="https://openclassrooms.com" target="_blank"&gt;OpenClassrooms&lt;/a&gt; ?&lt;/p&gt;</code>
+        </li>
+        <li><code>href="mailto:NOMDUMAIL@MAIL.COM"</code> crée un lien hypertexte qui ouvre la boîte mail avec un nouveau message vide.</li>
+        <li><code>href="NOMDEFICHIER.EXTENSION"</code> crée un lien hypertexte qui permet de télécharger un fichier que vous avez placé au préalable dans le même dossier que votre page web.</li>
+    </ul>
+</main>
+    <footer style="text-align: center; margin-top: 40px;">
+        <hr>
+        <div class="lien_direction">
+        <a href="\organiser_votre_texte">
+            &larr; <button class="chapitre">Chapitre précédant</button>
+        </a>
+        <a href="{{url_for('inserer_des_images')}}">
+            <button class="chapitre">Chapitre suivant</button> &rarr;</a>
+        </div>
+    </footer>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
