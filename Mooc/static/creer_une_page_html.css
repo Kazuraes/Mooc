@@ -1,1 +1,114 @@
-
+.position {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bouton {
+    display: flex;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(127, 255, 176);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.05em;
+    cursor: pointer;
+}
+.bouton:hover {
+    background-color: rgb(126, 240, 169);
+}
+.bouton:active {
+    transform: scale(0.95);
+}
+.html {
+    display: flex;
+    flex-direction: column;
+}
+.css {
+    display: flex;
+    flex-direction: column;
+}
+.css button {
+    display: flex;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(240, 255, 106);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: 150px;
+}
+.html button {
+    display: flex;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(240, 255, 106);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: 150px;
+}
+a{
+    text-decoration: none;
+}
+.chapitre {
+    border-radius: 5px;
+    background-color: rgb(127, 255, 170);
+    color: black;
+    padding: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.chapitre:hover {
+    background-color: rgb(115, 219, 150);
+}
+.chapitre:active {
+    transform: scale(0.95);
+}
+.html button:hover {
+    background-color: rgb(209, 235, 93);
+}
+.css button:hover {
+    background-color: rgb(209, 235, 93);
+}
+.html button:active {
+    transform: scale(0.95);
+}
+.css button:active {
+    transform: scale(0.95);
+}
+.creer_une_page_html {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.sortir {
+    font-size: 1em;
+}
+.button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(248, 61, 61);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 6.5px;
+    margin-left: 80px;
+    display: none;
+}
+.button:hover {
+    background-color: rgb(233, 86, 86);
+}
+.button:active {
+    transform: scale(0.95);
+}
+.lien_direction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+@media screen and (min-width: 1601px) {
+    .button {
+        margin-left: 150px;
+    }
+}
