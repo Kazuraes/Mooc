@@ -1,1 +1,147 @@
-
+body {
+    background-color: #2c3e50;
+}
+.creer_une_page_html {
+    /*on rend le div flexible pour placer les elements*/
+    display: flex;
+    /*on le place en colonne les elements*/
+    flex-direction: column;
+    /*on le place au milieu par rapport a la ligne vertical*/
+    align-items: center;
+    /*on le place au milieu par rapport a la ligne horizontal*/
+    justify-content: center;
+    /*la bordure la taille, forme et couleur */
+    border: 1px solid #ccc;
+    /*largeur donner*/
+    width: 450px;
+    /* la couleur de l'arriere plan*/
+    background-color: #d3c9c9;
+    /*on arrondi la bordure*/
+    border-radius: 8px;
+    /*hauteur donner*/
+    height: 232px;
+    /*450 px a partir du gauche*/
+    margin-left: 450px;
+    /* on lui donne une position fixe pour le placer la ou on veut*/
+    position: fixed;
+    /*on le laisse toucher le haut*/
+    top: 0;
+    /*un peu de place a l'interieur*/
+    padding: 14px;
+    /*et ensuite on l'espace a partir du haut*/
+    margin-top: 110px;
+}
+.form-input{
+    /*pas de bordure*/
+    border: none;
+    /*voir en haut pour explication de ces proprietes*/
+    border-radius: 12px;
+    padding: 8px;
+    width: 250px;
+    /*pour decaler ce qui sont en bas par raport a ou elle est*/
+    margin-bottom: 10px;
+}
+.button{
+    /*voir en haut pour explication*/
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    /*une arriere plan orange pour le bouton*/
+    background-color: #f76e2f;
+    /*on fait une transition pour que le background change de couleur au survole voir plus en bas pour detaille*/
+    /*⚠ le transorme est important ici et le ease pour donner l'effet*/
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    /*on mets un pointeur au survol*/
+    cursor: pointer;
+    width: 125px;
+    margin-bottom: 3px;
+    /*jusqu'ici*/
+}
+.button:hover{
+    background-color: #e7895d;
+}
+.button:active{
+    transform: scale(0.90);
+}
+.bouton {
+    /*pour le style de l'ensemble des boutons*/
+    /*pas de bordure*/
+    border: none;
+    /*un peu d'espace a l'interieur*/
+    padding: 5px;
+    /*un peu d'arrondi*/
+    border-radius: 12px;
+    /*largeur donner*/
+    width: 150px;
+    /*hauteur donner*/
+    height: 32px;
+    /*couleur de fond*/
+    background-color: rgb(112, 131, 240);
+    /*ajoute transition pour le bakgroud mais egalement pour le clicke*/
+    transition: background-color 0.5s ease, transform 0.4s ease;
+    /* pour le pointeur de souris*/
+    cursor: pointer;
+    /*pour la couleur de texte*/
+    color: white;
+}
+.bouton:hover{
+    background-color: #2980b9;
+}
+.bouton:active{
+    /*pour la rendre petite quand on clicke*/
+    transform: scale(0.95);
+}
+a {
+    text-decoration: none;
+}
+/*d'ici*/
+/*on utilise le mots clé @media screen and (ici on mets la largeur max) {ici on insere ce qui doit changer}*/
+/* le mot clé orientation veut dire le paysage du telephone en mode paysage ou portrait*/
+/*pour le téléphone en mode retourner*/
+@media screen and (orientation: landscape) and (max-width: 935px) {
+    button{
+        /*le positionnement*/
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+.creer_une_page_html {
+    margin-left: 20vw; /* 20% de la largeur de l'écran */
+}
+}
+/*paysage (c'est qu'on on inverse le tablette de sa position)*/
+@media screen and (min-width:950px) and (max-width:1100px) and (orientation: landscape) {
+    .creer_une_page_html{
+        margin-left: 250px;
+    }
+}
+/*portrait( c'est la telephone dans sont mode normal)*/
+@media screen and (orientation: portrait) and (max-width: 600px) {
+    button{
+        /*les positionnement*/
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    .creer_une_page_html {
+        margin-top: 32vh;
+        /*on change la hauteur, largeur, et on decale du gauche*/
+        height: 225px;
+        width: 275px;
+        margin-left: 50px;
+    }
+}
+/*portrait( c'est la tablette dans sont mode normal)*/
+@media screen and (min-width: 820px) and (max-width: 1380px) and (orientation: portrait) {
+    .creer_une_page_html{
+        /*on decale un peu du gauche*/
+        margin-left: 200px;
+    }
+}
+@media screen and (min-width: 1601px) {
+    .creer_une_page_html{
+        margin-top: 210px;
+        margin-left: 650px;
+    }
+}
+/*jusqu'ici c'est pour rendre responsive*/
