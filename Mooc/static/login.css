@@ -58,7 +58,7 @@ body{
 }
 
 /*structure de l'input et des boutons submits*/
-.page {
+.creer_une_page_html {
     /*le display flex deja expliquer voir en haut*/
     display: flex;
     flex-direction: column;
@@ -96,19 +96,19 @@ a {
 /*pour cela on utilise le mot clé media query*/
 /*paysage (c'est qu'on on inverse le telephone de sa position)*/
 @media screen and (orientation: landscape) and (max-width: 935px) {
-.page {
+.creer_une_page_html {
     margin-left: 20vw; /* 20% de la largeur de l'écran */
 }
 }
 /*paysage (c'est qu'on on inverse le tablette de sa position)*/
 @media screen and (min-width:950px) and (max-width:1100px) and (orientation: landscape) {
-    .page{
+    .creer_une_page_html{
         margin-left: 250px;
     }
 }
 /*portrait( c'est la telephone dans sont mode normal)*/
 @media screen and (orientation: portrait) and (max-width: 600px) {
-    .page {
+    .creer_une_page_html {
         /*on change la hauteur, largeur, et on decale du gauche*/
         height: 225px;
         width: 275px;
@@ -117,9 +117,14 @@ a {
 }
 /*portrait( c'est la tablette dans sont mode normal)*/
 @media screen and (min-width: 820px) and (max-width: 1380px) and (orientation: portrait) {
-    .page{
+    .creer_une_page_html{
         /*on decale un peu du gauche*/
         margin-left: 200px;
     }
 }
-
+@media screen and (min-width: 1601px) {
+    .creer_une_page_html{
+        margin-top: 210px;
+        margin-left: 650px;
+    }
+}
