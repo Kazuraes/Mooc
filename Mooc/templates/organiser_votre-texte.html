@@ -1,1 +1,168 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Organiser son texte en HTML - Version Complète</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='creer_une_page_html.css')}}">
+</head>
+<body>
+    <button class="button">❌</button>
+    <div class="position">
+        <div class="html">
+            <button class="bouton">Cours HTML</button>
+             <div class="creer_une_page_html">   
+            <a href="/creer_une_page_html">
+                <button>Créez votre première page web en HTML</button>
+            </a>
+            <a href="/organiser_votre_texte">
+                <button>Organisez votre texte en HTML</button>
+            </a>
+            <a href="/creer_un_lien_hypertexte_en_html">
+                <button>Créez un lien hypertexte en HTML</button>
+            </a>
+            <a href="/inserer_des_images">
+                <button>Insérer une image en HTML</button>
+            </a>
+        </div>
+        </div>
+        <div class="organiser_votre_texte">
+            <button class="bouton">Quiz HTML</button>
+        </div>
+        <div class="css">
+            <button class="bouton">Cours CSS</button>
+        </div>
+        <div class="inserer_des_images">
+            <button class="bouton">Quiz CSS</button>
+        </div>
+    </div>
+    <main>
+    <h1>Organisez votre texte</h1>
+    <p>C'est donc dans <code>&lt;body&gt;&lt;/body&gt;</code> que nous allons écrire du texte à afficher en utilisant des balises HTML pour le structurer grâce à des paragraphes, des titres, des listes ou encore mettre en avant du texte important.</p>
+
+    <hr>
+
+    <h2>Créez des paragraphes avec les balises &lt;p&gt;&lt;/p&gt;</h2>
+    <p>Les balises <code>&lt;p&gt;&lt;/p&gt;</code> permettent de délimiter des paragraphes en HTML :</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Ma page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Ceci est le contenu de mon premier paragraphe&lt;/p&gt;
+        &lt;p&gt;Ceci est le contenu de mon deuxième paragraphe&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>Eh bien devinez quoi : il existe une balise pour cela !</p>
+
+    <hr>
+
+    <h2>Revenez à la ligne avec la balise orpheline &lt;br&gt;</h2>
+    <p>Pour revenir à la ligne, on utilise la balise orpheline <code>&lt;br&gt;</code> (pour <em>break</em>), on n'a donc pas besoin de la fermer :</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Ma page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Ceci est le contenu de mon premier paragraphe, &lt;br&gt;dont le contenu est particulièrement long.&lt;/p&gt;
+        &lt;p&gt;Ceci est le contenu de mon deuxième paragraphe&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>Testez pour voir avec le CodePen P1C4a.</p>
+    <blockquote>
+        <p>CodePen est une console en ligne, un genre de bac à sable de code : vous pouvez jouer avec et changer des choses pour voir ce que cela fait en direct. Ne vous inquiétez pas, vous ne modifiez pas la base de code du CodePen ; si vous voulez retrouver le code d'origine, il vous suffit de rafraichir la page.</p>
+        <p>Les bouts de code dans CodePen ne contiennent que le code qui irait dans la balise <code>&lt;body&gt;</code>. Ne soyez pas étonné s'il n'y a pas la balise <code>&lt;head&gt;&lt;/head&gt;</code> ni les autres éléments que nous avons pu voir.</p>
+    </blockquote>
+    <p>Vous pouvez théoriquement mettre plusieurs balises <code>&lt;br&gt;</code> d'affilée pour faire plusieurs sauts de lignes, mais on considère que c'est une mauvaise pratique qui rend le code délicat à maintenir. Pour décaler un texte avec plus de précision, on utilisera le CSS, ce langage qui vient compléter le HTML pour lui ajouter du style, et dont je vous parlerai un peu plus loin.</p>
+    <p>Maintenant que vous savez créer des paragraphes et sauter des lignes, voyons comment créer des titres.</p>
+
+    <hr>
+
+    <h2>Créez des titres avec les balises &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;…</h2>
+    <p>Les balises de titres vont de <code>&lt;h1&gt;&lt;/h1&gt;</code> jusqu'à <code>&lt;h6&gt;&lt;/h6&gt;</code>, ce qui permet de hiérarchiser et structurer le texte dans différentes sections, du niveau le plus grand, au niveau le plus petit.</p>
+    <p>Il faut toujours structurer sa page en commençant par un titre de niveau 1 <code>&lt;h1&gt;</code>, puis structurer l'intérieur avec des titres de niveau 2 <code>&lt;h2&gt;</code>, puis, si besoin de structurer l'intérieur, utiliser des titres de niveau 3, etc. Il ne devrait pas y avoir de sous-titre sans titre principal !</p>
+    <p>Ne confondez pas :</p>
+    <ul>
+        <li>La balise <code>&lt;h1&gt;</code> sert à créer un titre de niveau 1 qui sera affiché sur la page web.</li>
+        <li>La balise <code>&lt;title&gt;</code> n'affiche rien sur la page web, elle affiche le titre de la page dans l'onglet du navigateur.</li>
+    </ul>
+    <p>Ajoutons donc des balises de titre dans le code :</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Ma page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Bienvenue sur ma page&lt;/h1&gt;
+        &lt;p&gt;Ceci est le contenu de mon premier paragraphe&lt;/p&gt;
+        &lt;p&gt;Ceci est le contenu de mon deuxième paragraphe&lt;/p&gt;
+        &lt;h2&gt;Voilà mon sous-titre 1&lt;/h2&gt;
+        &lt;h3&gt;Une sous-partie&lt;/h3&gt;
+        &lt;p&gt;Un paragraphe&lt;/p&gt;
+        &lt;h3&gt;Une autre sous-partie&lt;/h3&gt;
+        &lt;p&gt;Tiens encore un paragraphe&lt;/p&gt;
+        &lt;h2&gt;Voilà mon sous-titre 2&lt;/h2&gt;
+        …
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>Votre navigateur affiche par défaut des tailles différentes de texte en fonction des titres, mais si vous voulez modifier la taille du texte, sachez que nous apprendrons à faire cela en CSS un peu plus tard.</p>
+
+    <hr>
+
+    <h2>Créez des listes avec les balises &lt;li&gt; et &lt;ul&gt; ou &lt;ol&gt;</h2>
+    
+    <h3>Étape 1 : balisez les éléments d'une liste avec &lt;li&gt;&lt;/li&gt;</h3>
+    <p>Pour baliser les éléments qu'on veut mettre dans une liste, on utilise <code>&lt;li&gt;&lt;/li&gt;</code> (pour "list item" ou "élément de la liste" en français). Puis on les insère tous à l'intérieur d'une autre balise pour indiquer s'il s'agit d'une liste à puces ou d'une liste numérotée.</p>
+    
+    <h3>Étape 2 : insérez la liste dans des balises &lt;ul&gt;&lt;/ul&gt; ou &lt;ol&gt;&lt;/ol&gt;</h3>
+    <p>Les balises <code>&lt;ul&gt;&lt;/ul&gt;</code> (pour "unordered list") permettent d'indiquer qu'on démarre une liste non ordonnée, c'est-à-dire, ce que l'on appelle en français une liste à puces.</p>
+    <p>Les balises <code>&lt;ol&gt;&lt;/ol&gt;</code> (pour "ordered list") permettent d'indiquer qu'on démarre une liste ordonnée, autrement dit en français une liste numérotée.</p>
+    <p>Comme c'est particulièrement intuitif, je vous laisse admirer la simplicité de cet exemple :</p>
+    <pre><code>&lt;h1&gt;Les fruits rouges&lt;/h1&gt;
+&lt;ul&gt;
+   &lt;li&gt;Fraises&lt;/li&gt;
+   &lt;li&gt;Framboises&lt;/li&gt;
+   &lt;li&gt;Groseilles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Ma journée&lt;/h1&gt;
+&lt;ol&gt;
+   &lt;li&gt;Je me lève.&lt;/li&gt;
+   &lt;li&gt;Je mange et je bois de l'eau.&lt;/li&gt;
+   &lt;li&gt;Je retourne me coucher.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <hr>
+
+    <h2>Mettez en valeur du texte important</h2>
+    <p>Dans le texte qui s'affiche sur une page web, vous aimeriez faire ressortir certains mots en particulier.</p>
+    <p>La balise la plus utilisée pour cela est <code>&lt;strong&gt;</code> mais HTML vous propose différents moyens de mettre en valeur le texte de votre page :</p>
+    
+    <ul>
+        <li><strong>Balise <code>&lt;mark&gt;&lt;/mark&gt;</code> :</strong> Surligner le texte.</li>
+        <li><strong>Balise <code>&lt;em&gt;&lt;/em&gt;</code> :</strong> Mettre le texte en italique.</li>
+        <li><strong>Balise <code>&lt;strong&gt;&lt;/strong&gt;</code> :</strong> Mettre le texte en gras.</li>
+    </ul>
+
+    <p>Testez pour voir avec le CodePen P1C4b !</p>
+    <p>En fait, c'est le navigateur qui choisit comment afficher les mots qu'on lui indique comme étant plus ou moins importants (en gras, en italique,…). Les balises <code>&lt;em&gt;</code> et <code>&lt;strong&gt;</code> ne signifient pas respectivement “mettre en italique" ou "mettre en gras” mais seulement que le texte est “important”. On pourra décider plus tard, en CSS, d'afficher les mots “importants” d'une autre façon que le gras, si on le souhaite.</p>
+    <p>Les robots de moteurs de recherche parcourent le Web en lisant le code HTML de tous les sites. Les mots-clés “importants”, mais aussi les titres (headings) hiérarchisés auront tendance à avoir plus de valeur à leurs yeux ; donc si quelqu'un fait une recherche sur ces mots, il a plus de chances de tomber sur votre site (votre site aura un meilleur référencement). Mais attention tout de même : abuser de ces balises n’aura pas l’effet escompté sur votre référencement.</p>
+    </footer>
+    <footer style="text-align: center; margin-top: 40px;">
+        <hr>
+        <div class="lien_direction">
+        <a href="/creer_une_page_html">
+            &larr; <button class="chapitre">Chapitre précédant</button>
+        </a>
+        <a href="/creer_un_lien_hypertexte_en_html">
+            <button class="chapitre">Chapitre suivant</button> &rarr;</a>
+        </div>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</main>
+</body>
+</html>
