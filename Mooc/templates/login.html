@@ -3,32 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for ('static', filename='style.css')}}">
-    <title>Inscription</title>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='login.css')}}">
 </head>
 <body>
     <a href="/login"><button class="bouton" id="bouton-retour">Connexion</button></a>
     <a href="/"><button class="bouton" id="bouton-retour">inscription</button></a>
-        <form id="form" action="/inscrire" method="post">
+    <div class="page-connexion">
+        <form action="/login" method="post">
             <!--c'est le div page-->
-            <div class="page">
-                <label for="prenom">Prenom</label>
-                <input type="text" name="prenom" id="prenom" class="form-input" required>
+            <div class="creer_une_page_html">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" class="form-input" required>
                 <label for="password">Mot de passe</label>
                 <input type="password" name="password" id="password" class="form-input" required>
-                <!--ici on mets si il y a une erreur (voir app.py) alors un paragraphe rouge affichons l'erreur-->
+                <!--ici si il y a une erreur -->
                 {% if error %}
-                <p style="color:red;">{{ error }}</p>
-                {% else %}
-                <!--sinon le paragraphe est a ca place mais pas d'ecruture-->
-                <p id="error-message"></p>
+                <!--alors on affiche l'erreur en rouge-->
+                <p style="color: red;">{{ error }}</p>
                 {% endif %} <!--fin de l'instruction-->
-                <!--c'est le bouton s'inscrire-->
-                <button class="button" id="button" type="submit">S'inscrire</button>
-        </form>
+                <!--c'est le bouton se connecter-->
+                <button class="bouton" id="button" type="submit">se connecter</button>
+            </form>
+        </div>
     </div>
-</div>
 </body>
 </html>
