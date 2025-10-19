@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz CSS3 - Compétences évaluées</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='creer_une_page_html.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static', filename='style_quiz_css.css')}}" />
+</head>
+<body>
+      <button class="button">❌</button>
+    <div class="position">
+        <div class="html">
+            <button class="bouton">Cours HTML</button>
+             <div class="creer_une_page_html">   
+            <a href="/creer_une_page_html">
+                <button>Créez votre première page web en HTML</button>
+            </a>
+            <a href="/organiser_votre_texte">
+                <button>Organisez votre texte en HTML</button>
+            </a>
+            <a href="/creer_un_lien_hypertexte_en_html">
+                <button>Créez un lien hypertexte en HTML</button>
+            </a>
+            <a href="/inserer_des_images">
+                <button>Insérer une image en HTML</button>
+            </a>
+        </div>
+        </div>
+        <div class="organiser_votre_texte">
+            <a href="/quiz_html">
+            <button class="bouton">Quiz HTML</button>
+          </a>
+        </div>
+        <div class="css">
+            <button class="bouton">Cours CSS</button>
+        </div>
+        <div class="inserer_des_images">
+            <a href="/quiz_css">
+            <button class="bouton">Quiz CSS</button>
+          </a>
+        </div>
+    </div>
+    <h1>Quiz CSS3 : Compétences évaluées</h1>
+
+    <form id="quizForm">
+        <div class="question">
+            <h3>1. Quelles étapes doit-on suivre pour importer du CSS dans un fichier HTML ? (plusieurs réponses possibles)</h3> <hr>
+            <div class="options">
+                <label><input type="checkbox" name="q1" value="1" /> Importer le fichier dans une balise &lt;css&gt;</label>
+                <label><input type="checkbox" name="q1" value="2" /> Créer un fichier ayant l'extension .css</label>
+                <label><input type="checkbox" name="q1" value="3" /> Utiliser la balise &lt;link&gt; pour importer le fichier</label>
+                <label><input type="checkbox" name="q1" value="4" /> Écrire directement du style dans la balise &lt;css&gt;</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>2. Comment faire pour que la couleur du titre et du paragraphe soient #ff1493 ? (plusieurs réponses possibles)</h3> <hr>
+            <pre class="q">
+                &lt;body&gt;
+                    &lt;h1&gt;Bienvenue sur ma page&lt;/h1&gt;
+                    &lt;p&gt;Ceci est le super contenu de mon paragraphe&lt;/p&gt;
+                &lt;/body&gt;
+            </pre>
+            <div class="options">
+                <label><input type="checkbox" name="q2" value="1" /> h1, p{ color: #ff1493; }</label>
+                <label><input type="checkbox" name="q2" value="2" /> h1 { color: #ff1493; } p { color: #ff1493; }</label>
+                <label><input type="checkbox" name="q2" value="3" /> h1, p { color: rgb(255, 20, 147); }</label>
+                <label><input type="checkbox" name="q2" value="4" /> h1 + p { color: #ff1493; }</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>3. Quelles propriétés de texte ont été appliquées dans les classes ? (plusieurs réponses possibles)</h3> <hr>
+            <img src="static/images/16691116567745_quiz2-q3.png" alt="question 3 quiz css" width="700" />
+            <div class="options">
+                <label><input type="checkbox" name="q3" value="1" /> text-align</label>
+                <label><input type="checkbox" name="q3" value="2" /> font-size</label>
+                <label><input type="checkbox" name="q3" value="3" /> text-decoration</label>
+                <label><input type="checkbox" name="q3" value="4" /> font-family</label>
+                <label><input type="checkbox" name="q3" value="5" /> color</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>
+                4. Par quelles valeurs pourriez-vous remplacer le code de la ligne 9 pour obtenir le même résultat ?
+                (Tester : <a href="https://codepen.io/OpenClassroomsLearning/pen/OJZgvGg?editors=1100" target="_blank">CodePen</a>)
+            </h3> <hr>
+            <div class="options">
+                <label><input type="radio" name="q4" value="1" /> background-color: rgb(25, 25, 112);</label>
+                <label><input type="radio" name="q4" value="2" /> background-color: #191970 60%;</label>
+                <label><input type="radio" name="q4" value="3" /> background-color: rgba(25, 25, 112, 0.7);</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>5. Quelle(s) propriété(s) ajouter ou modifier à la classe .banniere pour que mon background s'adapte bien en largeur, s'affiche une seule fois et affiche aussi bien le sol que le ciel ? (plusieurs réponses possibles) (Tester : <a href="https://codepen.io/OpenClassroomsLearning/pen/wvjejwP?editors=1100" target="_blank">CodePen</a>)</h3> <hr>
+            <div class="options">
+                <label><input type="checkbox" name="q5" value="1" /> background-repeat: no-repeat;</label>
+                <label><input type="checkbox" name="q5" value="2" /> background-size: cover;</label>
+                <label><input type="checkbox" name="q5" value="3" /> background-position: center;</label>
+                <label><input type="checkbox" name="q5" value="4" /> background-attachement: fixed;</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Vous avez la page juste en dessous. Le HTML et le CSS ont été codés de sorte à avoir :</p>
+            <pre class="q">
+            &lt;div class="banner"&gt;
+                &lt;h1&gt;☀️ Bienvenue sur ma page 🏝&lt;/h1&gt;            
+                &lt;/div&gt;
+            &lt;h1&gt;Ici, vous avez le contenu de la page&lt;/h&gt;
+            </pre>
+            <p>Et le résultat</p>
+            <img src="static/images/16691237331247_Quiz2 Q6.png" alt="question 6 quiz css" width="700" />
+            <h3>6. Quelles propriétés manquent pour obtenir le même effet sur la card ? (plusieurs réponses possibles)</h3> <hr>
+            <div class="options">
+                <label><input type="checkbox" name="q6" value="1" /> box-shadow</label>
+                <label><input type="checkbox" name="q6" value="2" /> border</label>
+                <label><input type="checkbox" name="q6" value="3" /> border-radius</label>
+                <label><input type="checkbox" name="q6" value="4" /> text-shadow</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>7. Quel bout de code CSS vous permet de créer un effet où le texte, ainsi que le bord qui entoure le lien, deviennent bleu lorsqu’on clique sur le lien ? Tester <a href="https://codepen.io/OpenClassroomsLearning/pen/KKRqRdG?editors=1100" target="_blank">CodePen</a> :</h3> <hr>
+            <div class="options">
+                <label><input type="radio" name="q7" value="1" /> a:hover { color: blue; border-color: blue; }</label>
+                <label><input type="radio" name="q7" value="2" /> a:active { color: blue; border-color: blue; }</label>
+                <label><input type="radio" name="q7" value="3" /> a:clicked { color: blue; border-color: blue; }</label>
+                <label><input type="radio" name="q7" value="4" /> active { color: blue; border-color: blue; }</label>
+            </div>
+        </div>
+
+        <button type="button" id="validateBtn" style="background-color: #48ba5b; display: block; margin: 20px auto; padding: 8px 16px;font-size: 15px; color: white; border: none; border-radius: 4px;cursor: pointer; ">Valider mes réponses</button>
+    </form>
+
+
+    <div id="result"></div>
+    <script src="{{url_for('static', filename='script.js')}}" defer></script>
+    <script src="{{url_for('static', filename='script_quiz_css.js')}}" defer></script>
+</body>
+</html>
 
