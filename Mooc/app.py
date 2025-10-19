@@ -76,6 +76,12 @@ def inserer_des_images() :
 @app.route('/page4')
 def page4() :
     return render_template('page4.html')
+@app.route('/quiz_html') # route vers le quiz css
+def quiz_html() :
+    return render_template('quiz_html.html') 
+@app.route('/quiz_css') # route vers le quiz html
+def quiz_css() :
+    return render_template('quiz_css.html')
 
 if __name__ == '__main__' : 
     # app.run(debug=True) : démarre le serveur Flask en mode debug (rechargement auto + erreurs détaillées)
