@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz HTML5 - Compétences évaluées</title>
+  <link rel="stylesheet" href="{{url_for ('static', filename='creer_une_page_html.css')}}">
+  <link rel="stylesheet" href="{{url_for ('static', filename='style_quiz_html.css')}}" />
+</head>
+<body>
+    <button class="button">❌</button>
+    <div class="position">
+        <div class="html">
+            <button class="bouton">Cours HTML</button>
+             <div class="creer_une_page_html">   
+            <a href="/creer_une_page_html">
+                <button>Créez votre première page web en HTML</button>
+            </a>
+            <a href="/organiser_votre_texte">
+                <button>Organisez votre texte en HTML</button>
+            </a>
+            <a href="/creer_un_lien_hypertexte_en_html">
+                <button>Créez un lien hypertexte en HTML</button>
+            </a>
+            <a href="/inserer_des_images">
+                <button>Insérer une image en HTML</button>
+            </a>
+        </div>
+        </div>
+        <div class="organiser_votre_texte">
+          <a href="/quiz_html">
+            <button class="bouton">Quiz HTML</button>
+          </a>
+        </div>
+        <div class="css">
+            <button class="bouton">Cours CSS</button>
+        </div>
+        <div class="inserer_des_images">
+          <a href="/quiz_css">
+            <button class="bouton">Quiz CSS</button>
+          </a>
+        </div>
+    </div>
+
+  <h1>Quiz HTML5 : Compétences évaluées</h1>
+
+  <form id="quizForm">
+
+    <div class="question">
+      <h3>1. Pour écrire un paragraphe de texte en HTML, il faut :</h3>
+      <div class="options">
+        <label><input type="radio" name="q1" value="1"> &lt;paragraph&gt;Ceci est mon texte&lt;/paragraph&gt;</label>
+        <label><input type="radio" name="q1" value="2"> &lt;p&gt;Ceci est mon texte&lt;/p&gt;</label>
+        <label><input type="radio" name="q1" value="3"> &lt;p value="Ceci est mon texte"&gt;</label>
+        <label><input type="radio" name="q1" value="4"> &lt;body&gt;Ceci est mon texte&lt;/body&gt;</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>2. Vous avez une page index.html qui veut afficher l'image perroquet.png située dans le dossier /images :</h3>
+      <div class="options">
+        <label><input type="radio" name="q2" value="1"> &lt;image src="images/perroquet.png" alt="Un perroquet mange une amande"&gt;</label>
+        <label><input type="radio" name="q2" value="2"> &lt;img&gt;"perroquet.png"&lt;/img&gt;</label>
+        <label><input type="radio" name="q2" value="3"> &lt;img src="perroquet.png" alt="Un perroquet mange une amande"&gt;</label>
+        <label><input type="radio" name="q2" value="4"> &lt;img src="images/perroquet.png" alt="Un perroquet mange une amande"&gt;</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3. Quelles erreurs sont présentes dans ce bout de code HTML ? (plusieurs réponses possibles)</h3>
+      <div class="options">
+        <label><input type="checkbox" name="q3" value="1"> &lt;h2&gt; est utilisé avant &lt;h1&gt;</label>
+        <label><input type="checkbox" name="q3" value="2"> Réponse manquante</label>
+        <label><input type="checkbox" name="q3" value="3"> La source de l'image n'est pas précisée</label>
+        <label><input type="checkbox" name="q3" value="4"> La balise &lt;p&gt; n'est pas fermée</label>
+        <label><input type="checkbox" name="q3" value="5"> L'image ne possède pas d'attribut alt</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>4. Une valeur et un attribut permettent, ensemble, d'ouvrir un lien dans un nouvel onglet. Lesquels ? (plusieurs réponses possibles) :</h3>
+      <div class="options">
+        <label><input type="checkbox" name="q4" value="1"> L'attribut target</label>
+        <label><input type="checkbox" name="q4" value="2"> La valeur _blank</label>
+        <label><input type="checkbox" name="q4" value="3"> L’attribut title</label>
+        <label><input type="checkbox" name="q4" value="4"> La valeur mailto:</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>5. Parmi ces affirmations sur les commentaires HTML, lesquelles sont correctes ? (plusieurs réponses possibles)</h3>
+      <div class="options">
+        <label><input type="checkbox" name="q5" value="1"> En HTML, on ouvre un commentaire avec &lt;!--</label>
+        <label><input type="checkbox" name="q5" value="2"> En HTML, on ferme un commentaire avec //</label>
+        <label><input type="checkbox" name="q5" value="3"> Les commentaires ne sont pas visibles dans le code source</label>
+        <label><input type="checkbox" name="q5" value="4"> Il existe des raccourcis clavier pour commenter rapidement</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>6. Quel bout de code permet d'obtenir le résultat de l'image ci-dessous ?</h3>
+      <a><img src="static/images/16691096356852_Capture d’écran 2022-11-22 à 10.33.42.png" alt="Ceci est un lien" width=700;></a>
+      <div class="options">
+        <label><input type="radio" name="q6" value="1"> &lt;a href="http://lien.com" title="Ceci est un lien"&gt;Cliquez pour voir&lt;/a&gt;</label>
+        <label><input type="radio" name="q6" value="2"> &lt;a href="http://lien.com" title="Cliquez pour voir"&gt;Ceci est un lien&lt;/a&gt;</label>
+        <label><input type="radio" name="q6" value="3"> &lt;a href="http://lien.com" bulle="Cliquez pour voir"&gt;Ceci est un lien&lt;/a&gt;</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>7. Quel bout de code correspond à l'affichage de l'image juste en dessous ?</h3>
+      <a><img src="static/images/16691097184515_Capture d’écran 2022-11-22 à 10.34.58.png" alt="Liste non ordonnée" width=700;></a>
+      <div class="options">
+        <label><input type="radio" name="q7" value="1">&lt;ul&gt;<br>
+            &lt;li&gt;Paris&lt;/li&gt;<br>
+            &lt;li&gt;Taipei&lt;/li&gt;<br>
+            &lt;li&gt;Kyoto&lt;/li&gt;<br>
+            &lt;li&gt;Sydney&lt;/li&gt;
+          <br>&lt;/ul&gt;</label>
+        <label>
+          <input type="radio" name="q7" value="2">
+          &lt;ol&gt;<br>
+          &lt;li&gt;Paris&lt;/li&gt;<br>
+          &lt;li&gt;Taipei&lt;/li&gt;<br>
+          &lt;li&gt;Kyoto&lt;/li&gt;<br>
+          &lt;li&gt;Sydney&lt;/li&gt;<br>
+          &lt;/ol&gt;
+        </label>
+        <label>
+          <input type="radio" name="q7" value="3">
+            &lt;li&gt;<br>
+            &lt;ul&gt;Paris&lt;/ul&gt;<br>
+            &lt;ul&gt;Taipei&lt;/ul&gt;<br>
+            &lt;ul&gt;Kyoto&lt;/ul&gt;<br>
+            &lt;ul&gt;Sydney&lt;/ul&gt;<br>
+            &lt;/li&gt;
+          </label>
+        </label>
+      </div>
+    </div>
+
+     <button type="button" id="validateBtn" style="background-color: #48ba5b; display: block; margin: 20px auto; padding: 8px 16px;font-size: 15px; color: white; border: none; border-radius: 4px;cursor: pointer; ">Valider mes réponses</button>
+  </form>
+
+  <div id="result"></div>
+  <script src="{{url_for('static', filename='script.js')}}" defer></script>
+  <script src="{{url_for('static', filename='script_quiz_html.js')}}" defer></script>
+</body>
+</html>
 
